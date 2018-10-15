@@ -1,3 +1,3 @@
-[submodule "splunk-ansible"]
-  path = modules/splunk-ansible
-  url = url = git@github.com:coaic/splunk-ansible.git
+[submodule "modules/splunk-ansible"]
+	path = modules/splunk-ansible
+	url = git@github.com:coaic/splunk-ansible.git
