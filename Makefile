@@ -33,7 +33,17 @@ splunk: ansible
 
 ##### Run container with compose #####
 compose-up: compose-down
-	docker-compose -f ./${SPLUNK_COMPOSE} up -d
+	docker-compose -f ./${SPLUNK_COMPOSE} up --detach
+	docker-compose -f ./${SPLUNK_COMPOSE} logs --follow
+
+##### Start a previously stopped container
+compose-start:
+	docker-compose -f ./${SPLUNK_COMPOSE} start
+	docker-compose -f ./${SPLUNK_COMPOSE} logs --follow
+
+##### Stop a previously started/upped container
+compose-stop:
+	docker-compose -f ./${SPLUNK_COMPOSE} stop
 	docker-compose -f ./${SPLUNK_COMPOSE} logs --follow
 
 compose-down:

@@ -53,7 +53,7 @@ watch_for_failure(){
 	fi
 	echo ===============================================================================
 	echo
-	echo Ansible playbook complete, will begin streaming var/log/splunk/splunkd_stderr.log
+	echo Ansible playbook complete, will begin streaming var/log/splunk/splunkd_stderr.log and var/log/splunk/splunkd.log
 	echo
 	# Any crashes/errors while Splunk is running should get logged to splunkd_stderr.log and sent to the container's stdout
 	tail -n 0 -f ${SPLUNK_HOME}/var/log/splunk/splunkd_stderr.log ${SPLUNK_HOME}/var/log/splunk/splunkd.log &
