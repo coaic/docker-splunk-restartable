@@ -19,10 +19,10 @@ SPLUNK_LINUX_BUILD_URL ?= https://download.splunk.com/products/${SPLUNK_PRODUCT}
 all: splunk
 
 ansible:
-	if [ -d "splunk-ansible" ]; then \
+	if [ -d "modules/splunk-ansible" ]; then \
 		echo "Ansible directory exists - skipping clone"; \
 	else \
-		git clone https://github.com/splunk/splunk-ansible.git --branch ${SPLUNK_ANSIBLE_BRANCH}; \
+		git clone https://github.com/coaic/splunk-ansible.git --branch ${SPLUNK_ANSIBLE_BRANCH}; \
 	fi
 
 ##### Splunk image #####

@@ -20,4 +20,5 @@ volumes/etc/apps/splunk_instrumentation/
 volumes/etc/apps/splunk_monitoring_console/
 volumes/etc/apps/user-prefs/
 volumes/etc/apps/splunk_datasets_addon/metadata/local.meta
+ansible-configs/defaults/default.yml
 

@@ -14,12 +14,13 @@ services:
     build:
       context: ./
       dockerfile: ./Dockerfile
-    hostname: splunkenterprise
+    hostname: splunkstandalone
     environment:
       SPLUNK_START_ARGS: --accept-license
       SPLUNK_ROLE: splunk_standalone
       SPLUNK_ENABLE_LISTEN: 9997
       SPLUNK_ADD: tcp 1514
+      DEBUG: "true"
     volumes:
       - type: volume
         source: opt-splunk-etc
