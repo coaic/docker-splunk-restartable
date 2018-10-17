@@ -22,7 +22,7 @@ ansible:
 	if [ -d "modules/splunk-ansible" ]; then \
 		echo "Ansible directory exists - skipping clone"; \
 	else \
-		git clone https://github.com/coaic/splunk-ansible.git --branch ${SPLUNK_ANSIBLE_BRANCH}; \
+		git clone https://github.com/coaic/splunk-ansible.git --branch ${SPLUNK_ANSIBLE_BRANCH} modules/splunk-ansible; \
 	fi
 
 ##### Splunk image #####
